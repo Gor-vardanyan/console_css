@@ -22,4 +22,64 @@ main{
 #consola_img{
     opacity: 0.5;
     position: absolute;
+    z-index: -1;
+}
+#background_consola{
+    display: flex;
+}
+#derecha{
+    display: flex;
+}
+.pata{
+    margin-top: 2em;
+    margin-left: 10em;
+    width: 8.2em;
+    height: 17em;
+    background-color: gray;
+    border-radius: 0em 3em 4em 4em;
+    transform: rotate(-14deg);
+}
+
+.cuadroControl{
+    width: 8em;
+    border-radius: 4em;
+    height: 8em;
+    background-color:#8c8b8b;
+    margin-left: -9.5em;
+    margin-top: 2.6em;
+    z-index: 1;
+}
+.anchoConsola{
+    width: 17em;
+    height: 11.8em;
+    background-color: gray;
+    margin-right: -24em;
+    margin-top: 1.9em;
+}
+.cuadroAnchoConsola{
+    margin-right: -10em;
+    margin-top: 18px;
+    width: 4em;
+    margin-left: 20em;
+    height: 1em;
+    border-radius: 1em 1em 0 0;
+    background-color: gray;
+}
+.redondoAnchoConsola{
+    margin-right: -10em;
+    margin-top: 173px;
+    margin-left: 2em;
+    width: 4.3em;
+    margin-bottom: 0em;
+    height: 4.3em;
+    background-color: gray;
+    border-radius: 4em;
+}
+#izquierda{
+    margin-left: -25.8em;
+    display: flex;
+    transform: scaleX(-1);
+}
+#derecha{
+    margin-left: 1.1em;
 }
