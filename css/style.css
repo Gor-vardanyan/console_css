@@ -1,94 +1,105 @@
 body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
+    height: 100vh;
     margin: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: black;
+    padding: 0;
 }
-main{
+
+main{ 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 50em;
-    height: 40em;
+    height: 100vh;
+}
 
+.global{
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
+
 #consola_img{
-    opacity: 0.5;
     position: absolute;
-    z-index: -1;
+    display: flex;
+    align-self: center;
+    z-index: 1;
+    opacity: 0.6;
 }
+
+#mando{
+    height: 18em;
+    width: 31em;
+}
+
 #background_consola{
     display: flex;
 }
-#derecha{
+
+#joystick_group{
+    position: absolute;
+    top: 8em;
+    right: 1.6em;
     display: flex;
-}
-.pata{
-    margin-top: 2em;
-    margin-left: 10em;
-    width: 8.2em;
-    height: 17em;
-    background-color: gray;
-    border-radius: 0em 3em 4em 4em;
-    transform: rotate(-14deg);
+    justify-content: center;
+    width: 5.5em;
+    height: 5.5em;
+    border-radius: 3em;
+    background-color: #656668;
 }
 
-.cuadroControl{
-    width: 8em;
-    border-radius: 4em;
-    height: 8em;
-    background-color:#8c8b8b;
-    margin-left: -9.5em;
-    margin-top: 2.6em;
-    z-index: 1;
-}
-.anchoConsola{
-    width: 17em;
-    height: 11.8em;
-    background-color: gray;
-    margin-right: -24em;
-    margin-top: 1.9em;
-}
-.cuadroAnchoConsola{
-    margin-right: -10em;
-    margin-top: 18px;
-    width: 4em;
-    margin-left: 20em;
-    height: 1em;
-    border-radius: 1em 1em 0 0;
-    background-color: gray;
-}
-.redondoAnchoConsola{
-    margin-right: -10em;
-    margin-top: 173px;
-    margin-left: 2em;
-    width: 4.3em;
-    margin-bottom: 0em;
-    height: 4.3em;
-    background-color: gray;
-    border-radius: 4em;
-}
-#izquierda{
-    margin-left: -25.8em;
-    display: flex;
-    transform: scaleX(-1);
-}
-#derecha{
-    margin-left: 1.1em;
-}
 .joystick{
+    align-self: center;
+    background-color: #5d5e60;
     width: 2.5em;
     height: 2.5em;
-    margin-top: 5em;
-    margin-left: 8.6em;
-    border-radius: 6em;
-    background-color: aquamarine;
+    border-radius: 3em;
+    border: solid 0.6em;
 }
+
+#izquierda{
+    position: relative;
+    width: 50%;
+    height: 18em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#derecha{
+    position: relative;
+    width: 50%;
+    height: 18em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scaleX(-1);
+}
+
+.estetica_cuadro_consola{
+    width: 3.4em;
+    margin-right: 0.5em;
+    border-radius: 0.5em 0.5em 0em 0em;
+    height: 1em;
+    margin-top: 0.3em;
+    background-color: #4c4d4f;
+}
+
+.cuadro_ancho_consola{
+    position: absolute;
+    width: 9.9em;
+    height: 11.8em;
+    left: 5.6em;
+    top: 0.8em;
+    background-color: #5d5e60;
+}
+
+.pata{
+    position: absolute;
+    height: 95%;
+    width: 8.1em;
+    left: 1.3em;
+    top: 0.8em;
+    background-color: #5d5e60;
+    transform: rotate(14deg);
+    border-radius: 3.4em 0em 4em 4em;
+}
+
