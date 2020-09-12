@@ -9,6 +9,7 @@ body{
     bottom: 0;
     left: 0;
     right: 0;
+    background-color: black;
 }
 main{
     display: flex;
@@ -17,7 +18,7 @@ main{
     align-items: center;
     width: 50em;
     height: 40em;
-    background-color: blue;
+
 }
 #consola_img{
     opacity: 0.5;
@@ -82,4 +83,12 @@ main{
 }
 #derecha{
     margin-left: 1.1em;
+}
+.joystick{
+    width: 2.5em;
+    height: 2.5em;
+    margin-top: 5em;
+    margin-left: 8.6em;
+    border-radius: 6em;
+    background-color: aquamarine;
 }
