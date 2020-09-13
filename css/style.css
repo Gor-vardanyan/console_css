@@ -86,6 +86,7 @@ main{
     height: 2.5em;
     border-radius: 3em;
     border: solid 0.6em #4c4d4f;
+    box-shadow: 0em 0.3em 3px 1px #00000099;
 }
 
 .estetica_cuadro_consola{
@@ -95,6 +96,44 @@ main{
     height: 1em;
     margin-top: 0.3em;
     background-color: #4c4d4f;
+}
+
+.luz{
+    position: absolute;
+    top: 1.2em;
+    right: 4.8em;
+    background-color: black;
+    height: 1.8em;
+    width: 0.8em;
+    border-radius: 1em;
+}
+
+.speaker1{
+    position: absolute;
+    top: 8em;
+    right: 1.2em;
+    background-color: black;
+    height: 0.6em;
+    width: 0.6em;
+    border-radius: 1em;
+}
+.speaker2{
+    position: absolute;
+    top: 8em;
+    right: 0.3em;
+    background-color: black;
+    height: 0.6em;
+    width: 0.6em;
+    border-radius: 1em;
+}
+.speaker3{
+    position: absolute;
+    top: 9em;
+    right: 0.4em;
+    background-color: black;
+    height: 0.6em;
+    width: 0.6em;
+    border-radius: 1em;
 }
 
 .cuadro_ancho_consola{
@@ -115,82 +154,118 @@ main{
     background-color: #5d5e60;
     transform: rotate(14deg);
     border-radius: 3.4em 0em 4em 4em;
+    background-image: linear-gradient(#5d5e60,#5d5e60, #393a3b)
 }
 
 .button_up{
     position: absolute;
     width: 1.5em;
     height: 1.1em;
-    background-color: #4c4d4f;
+    background-image: linear-gradient(-73deg, black, black, black, #ffffffc7);
+    background-color: #000000;
     top: 1.8em;
     border-radius: 0.2em;
     margin-left: 0.2em;
+    box-shadow: 0em 0.1em #00000070;
 }
-.button_right{
-    position: absolute;
-    width: 1.5em;
-    height: 1.1em;
-    background-color: #4c4d4f;
-    transform: rotate(90deg);
-    top: 3.5em;
-    margin-left: 3.3em;
-    border-radius: 0.2em;
-}
+
 .button_left{
     position: absolute;
     width: 1.5em;
     height: 1.1em;
-    background-color: #4c4d4f;
+    background-image: linear-gradient(-73deg, black, black, black, #ffffffc7);
+    background-color: #000000;
     left: 1.6em;
     top: 3.5em;
     transform: rotate(-90deg);
     border-radius: 0.2em;
     margin-left: 0.2em;
 }
+
+.button_right{
+    position: absolute;
+    width: 1.5em;
+    height: 1.1em;
+    background-image: linear-gradient(421deg, black, black, black, #ffffffc7);
+    background-color: #000000;
+    transform: rotate(90deg);
+    top: 3.3em;
+    right: 1.6em;
+    border-radius: 0.2em;
+}
+
 .button_bottom{
     position: absolute;
     top: 5.1em;
     width: 1.5em;
     height: 1.1em;
-    background-color: #4c4d4f;
+    background-image: linear-gradient(-15deg, black, black, black, #ffffffc7);
+    background-color: #000000;
     transform: rotate(180deg);
     border-radius: 0.2em;
     margin-left: 0.2em;
+    box-shadow: 0em -0.1em #00000070;
 }
 
 .piramide{
-    border-left: 0.76em solid transparent;
-    border-right: 0.76em solid transparent;
-    border-top: 0.9em solid #4c4d4f;
-    top: 3em;
+    top: 1em;
+    right: -1.1em;
+    height: 1.1em;
+    width: 4em;
+    background-color: black;
     position: absolute;
-    margin-top: -2em;
+    clip-path: polygon(55% 80%, 34% 0, 73% 0);
+}
+#transparent{
+    box-shadow: inset 3em -1em 0px -22px #ffffff42;
 }
 
 #verde{
+position: absolute;
 width: 1.7em;
 height: 1.7em;
 border-radius: 2em;
+top: 1.5em;
 background-color: green;
+box-shadow: 0em 0.1em #00000070;
+background-image: linear-gradient(37deg, #054e05, #1a6d1aad, #51ac5185, #ffffffc7);
 }
 
 #rojo{
+position: absolute;
 width: 1.7em;
 height: 1.7em;
 border-radius: 2em;
+left: 1.4em;
+top: 3.2em;
 background-color: red;
+box-shadow: -0.1em 0em #00000070;
+background-image: linear-gradient(-43deg, #691813, #771f19, #9c4f49a8, #ffffffc7);
+transform: rotate(-90deg);
 }
 
 #amarillo{
+position: absolute;
+top: 3.3em;
+right: 1.5em;
 width: 1.7em;
 height: 1.7em;
 border-radius: 2em;
-background-color: yellow;    
+background-color: #FFEB3B;
+box-shadow: 0.1em 0em #00000070;
+background-image: linear-gradient(57deg, #6f6615, #7b711ab5, #a69d4f99, #ffffffc7);
+transform: rotate(90deg);
 }
 
 #negro{
+position: absolute;
+top: 5.1em;
+left: 2.9em;
 width: 1.7em;
 height: 1.7em;
 border-radius: 2em;
-background-color: black;
+background-color: rgb(41, 39, 39);
+box-shadow: 0em -0.1em #00000070;
+background-image: linear-gradient(27deg, #080808, #3a3a3a, #929292a8, #ffffffc7);
+transform: rotate(180deg);
 }
