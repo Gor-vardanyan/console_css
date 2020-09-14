@@ -2,6 +2,8 @@ body{
     height: 100vh;
     margin: 0;
     padding: 0;
+    background-color: aliceblue;
+
 }
 
 main{ 
@@ -9,25 +11,31 @@ main{
     flex-direction: column;
     justify-content: center;
     height: 100vh;
+    font-family: sans-serif;
+    color: #404040;
+    letter-spacing: 0.1em;
 }
 
-.global{
+h2{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.contenedor{
     position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-#consola_img{
-    position: absolute;
-    display: flex;
-    align-self: center;
-    z-index: 1;
-    opacity: 0.6;
-}
 
 #mando{
     height: 18em;
     width: 31em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 #background_consola{
@@ -54,6 +62,70 @@ main{
     align-items: center;
     transform: scaleX(-1);
 }
+
+
+#contenedor_pantalla{
+    height: 11em;
+    width: 8.7em;
+    position: relative;
+    align-self: center;
+    top: -17em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    /*     comienza css pantalla         */
+
+#pantalla{
+    height: 6em;
+    width: 8.7em; 
+    background-color: #252424;
+    top: 1em;
+    border-radius: 1em;
+    border: groove 0.2em #00000099;
+    right: 18.2em;
+    transition: ease-in-out 1s;
+}
+#inicio_pantalla{
+    margin-top: 3.7em;
+    border-radius: 2em;
+    background-color: rgb(41, 39, 39);
+    box-shadow: 0em 0.1em #00000070;
+    width: 1.2em;
+    height: 1.2em;
+    border: solid 0.2em #4c4c4e;
+    transition: ease-in-out 0.5s;
+}
+
+#hadouken{
+    width: 8em;
+    margin-left: 0.7em;
+    height: auto;
+    transition: ease-out 0.1s;
+    opacity: 0;
+}
+
+#switch_on_off{
+    display: none;
+}
+
+#switch_on_off:checked + #pantalla{
+    transition: ease-in-out 1s;
+    box-shadow: 0px 0 5px 4px #7fffd459;
+    background-color: aquamarine;
+}
+
+#switch_on_off:checked + #pantalla > #hadouken{
+    opacity: 1;
+    transition: ease-in 1.8s;
+}
+
+label:active > #inicio_pantalla{
+    background-image: linear-gradient(146deg, #080808, #3a3a3a, #929292a8, #ffffffc7);
+    transition: ease-in-out 0.5s;
+}
+
+     /*     comienza css izquierda y derecha     */
 
 .buttons_group{
     position: absolute;
@@ -157,6 +229,9 @@ main{
     background-image: linear-gradient(#5d5e60,#5d5e60, #393a3b)
 }
 
+     /*     comienza css solo izquierda         */
+
+
 .button_up{
     position: absolute;
     width: 1.5em;
@@ -180,6 +255,7 @@ main{
     transform: rotate(-90deg);
     border-radius: 0.2em;
     margin-left: 0.2em;
+    box-shadow: -0.1em 0em #00000070;
 }
 
 .button_right{
@@ -192,6 +268,7 @@ main{
     top: 3.3em;
     right: 1.6em;
     border-radius: 0.2em;
+    box-shadow: 0.1em 0em #00000070;
 }
 
 .button_bottom{
@@ -220,6 +297,9 @@ main{
     box-shadow: inset 3em -1em 0px -22px #ffffff42;
 }
 
+        /*     comienza css solo derecha         */
+
+
 #verde{
 position: absolute;
 width: 1.7em;
@@ -227,8 +307,9 @@ height: 1.7em;
 border-radius: 2em;
 top: 1.5em;
 background-color: green;
-box-shadow: 0em 0.1em #00000070;
+box-shadow: 0em 0.2em 2px 0px #00000070;
 background-image: linear-gradient(37deg, #054e05, #1a6d1aad, #51ac5185, #ffffffc7);
+border: solid 0.01em #535252;
 }
 
 #rojo{
@@ -239,9 +320,10 @@ border-radius: 2em;
 left: 1.4em;
 top: 3.2em;
 background-color: red;
-box-shadow: -0.1em 0em #00000070;
+box-shadow: -0.2em 0em 2px 0px #00000070;
 background-image: linear-gradient(-43deg, #691813, #771f19, #9c4f49a8, #ffffffc7);
 transform: rotate(-90deg);
+border: solid 0.01em #535252;
 }
 
 #amarillo{
@@ -252,9 +334,10 @@ width: 1.7em;
 height: 1.7em;
 border-radius: 2em;
 background-color: #FFEB3B;
-box-shadow: 0.1em 0em #00000070;
+box-shadow: 0.2em 0em 2px 0px #00000070;
 background-image: linear-gradient(57deg, #6f6615, #7b711ab5, #a69d4f99, #ffffffc7);
 transform: rotate(90deg);
+border: solid 0.01em #535252;
 }
 
 #negro{
@@ -265,7 +348,21 @@ width: 1.7em;
 height: 1.7em;
 border-radius: 2em;
 background-color: rgb(41, 39, 39);
-box-shadow: 0em -0.1em #00000070;
+box-shadow: 0em -0.2em 2px 0px #00000070;
 background-image: linear-gradient(27deg, #080808, #3a3a3a, #929292a8, #ffffffc7);
 transform: rotate(180deg);
+border: solid 0.01em #535252;
+}
+
+#sombra{
+    height: 15em;
+    margin-top: -15em;
+    width: 29em;
+    background-image: linear-gradient(-180deg, #000000d1, transparent);
+    border-radius: 11em 11em 1em 1em;
+}
+
+#click_me{
+    display: flex;
+    position: relative;
 }
